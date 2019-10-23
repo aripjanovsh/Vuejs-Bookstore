@@ -61,9 +61,6 @@ export default {
         ...mapActions('Account', [
             'LOGOUT_USER'
         ]),
-        addBook() {
-            console.log('addBook');
-        },
         toggleLoginDialogVisibility() {
             this.loginDialog = !this.loginDialog;
         }

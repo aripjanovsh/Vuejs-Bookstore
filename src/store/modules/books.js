@@ -42,7 +42,6 @@ export default {
         },
         STORE_BOOKS_SAVED: (state, payload) => {
             state.items.push(payload);
-            console.log(state.items);
             state.isLoading = false;
             state.error = null;
         },
