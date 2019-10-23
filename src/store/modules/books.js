@@ -1,5 +1,6 @@
 import BookStoreServices from '../../services/BookStoreServices';
 import {objectGet} from "../../utils/object";
+import Vue from "vue";
 
 const bookStoreService = new BookStoreServices();
 export default {
@@ -59,6 +60,11 @@ export default {
                 })
                 .catch((error) => {
                     commit('GET_BOOKS_ERROR', error.message);
+                    Vue.toasted.show(error.message, {
+                        type: 'error',
+                        position: "bottom-center",
+                        duration : 3000
+                    });
                 });
 
         },
